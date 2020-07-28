@@ -1,0 +1,49 @@
+#lzy2020年5月22日
+只提供屏风模式
+
+参数说明
+title:'',显示名
+img:'',显示图片(只有非末项才可以展示图片,默认为箭头)
+children:[] ,//子菜单
+
+click后返回整个对象数据,可添加自定义字段,如value
+
+<menuList :defaultIndex="0" :menu="menuList" @click="menuClick"></menuList>
+
+样例数据
+	menuList: [
+				{
+					title: '目录1',
+					value: '00000',
+					// img: require('@/assets/icon/spyl.png'),
+					children: [
+						{
+							title: '子目录1',
+							value: '1231',
+						},
+						{
+							title: '子目录2',
+							value: '1231',
+						},
+					],
+				},
+				{
+					title: '目录2',
+					value: '11111',
+				},
+				{
+					title: '目录3',
+					value: '00000',
+					// img: require('@/assets/icon/spyl.png'),
+					children: [
+						{
+							title: '子目录1',
+							value: '1231',
+						},
+						{
+							title: '子目录2',
+							value: '1231',
+						},
+					],
+				},
+			],

@@ -1,0 +1,349 @@
+.left {
+	height: 100%;
+	width: 230px;
+	min-width: 230px;
+	background-color: #333744;
+	color: #fff;
+	margin-right: 25px;
+	.menuTitle {
+		padding: 11px 20px;
+		display: flex;
+		font-size: 18px;
+		background-color: #4a5064;
+		align-items: center;
+		margin-bottom: 10px;
+		img {
+			width: 14px;
+			height: 14px;
+			margin-right: 4px;
+		}
+	}
+}
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	.topMenu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		margin-bottom: 15px;
+		li {
+			padding: 2px 8px;
+			line-height: 28px;
+			font-size: 14px;
+			background-color: #d9dbdc;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+		.active {
+			color: #fff;
+			background-color: #4a5064;
+		}
+	}
+	.mainRouter {
+		flex: 1;
+		background-color: white;
+		position: relative;
+	}
+}
+.webs {
+	//禁止使用width:100%;
+	position: absolute;
+	flex-direction: column;
+	display: flex;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border: 1px solid #ddd;
+	.slotHeader {
+		//页面头
+		background-color: #e8e8e8;
+		padding: 10px 15px;
+		font-size: 14px;
+		font-weight: bold;
+		color: #0e2d5f;
+		border-bottom: 1px solid #ddd;
+	}
+	.slotOptions {
+		//页面中部
+		padding: 12px 15px;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom: 1px solid #ddd;
+		.inputs {
+			//输入区
+			display: flex;
+			margin-right: 15px;
+			> span {
+				display: inline-block;
+				max-width: 100%;
+				white-space: nowrap;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 28px;
+				min-width: 66px;
+			}
+			el-select {
+				right: 0;
+				margin-left: 10px;
+				width: 154px;
+				height: 28px;
+			}
+			.el-select .el-input .el-select__caret {
+				line-height: 28px;
+			}
+			.el-input {
+				width: 164px;
+				margin-right: 10px;
+			}
+			.el-date-editor {
+				box-sizing: border-box;
+				margin-right: 10px;
+				.el-icon-date {
+					line-height: 28px;
+					padding-left: 5px;
+					height: 28px;
+					box-sizing: border-box;
+				}
+			}
+
+			.el-range-editor--mini {
+				.el-range-separator {
+					line-height: 20px;
+				}
+			}
+			input {
+				margin-left: 10px;
+				max-width: 154px;
+				max-height: 28px;
+			}
+		}
+		.buttons {
+			//按钮区
+			position: absolute;
+			right: 10px;
+			z-index: 2;
+			.el-button {
+				box-sizing: border-box;
+				height: 32px;
+				padding: 3px 12px;
+			}
+		}
+	}
+	.slotMain {
+		//主要区,负责定位
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		position: relative;
+	}
+}
+.form-inline {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 12px;
+	.el-form-item {
+		margin-right: 0px;
+		.el-form-item__label {
+			width: 100px;
+			padding-right: 15px;
+		}
+		display: flex;
+		width: 50%;
+		.el-form-item__content {
+			flex: 1;
+			.el-textarea,
+			.el-select,
+			.el-textarea__inner {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.textarea {
+		width: 100%;
+		display: flex;
+		height: 140px;
+		.el-form-item__content {
+			flex: 1;
+			.el-textarea,
+			.el-textarea__inner {
+				height: 100%;
+			}
+		}
+	}
+}
+.slotTables {
+	//表格相关
+	width: 100%;
+	flex: 1;
+	position: relative;
+	* {
+		box-sizing: border-box;
+	}
+	.el-table {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		.el-table__body-wrapper {
+			overflow-y: auto;
+		}
+		.el-table__header-wrapper {
+		}
+		tr,
+		th,
+		td {
+			font-weight: 500;
+			color: #333;
+			padding: 6px 0px;
+			line-height: 23px;
+		}
+	}
+	.el-table__header-wrapper {
+		font-size: 12px;
+		tr {
+			th {
+				border: 0px solid #cacfd6;
+				border-width: 0 1px 1px 0;
+				box-sizing: border-box;
+			}
+		}
+		tr,
+		th {
+			background-color: #e9ecf4;
+		}
+	}
+	.el-table__body-wrapper {
+		font-size: 12px;
+		flex: 1;
+		padding-bottom: 5px;
+	}
+	.el-table__empty-text {
+		font-size: 18px;
+		width: 50%;
+		color: #909399;
+	}
+
+	.el-button--text {
+		font-size: 12px;
+		padding: 0px;
+		&:hover {
+			border-bottom: 1px solid;
+		}
+	}
+}
+.slotPagination {
+	height: 30px;
+	background-color: rgb(244, 244, 244);
+}
+
+.dialogMask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.25);
+	z-index: 102;
+	.main {
+		background-color: #fff;
+		border-radius: 5px;
+		position: relative;
+		.header {
+			width: 100%;
+			height: 42px;
+			color: white;
+			font-size: 15px;
+			background-color: #158cf2;
+			display: flex;
+			align-items: center;
+			position: relative;
+			span {
+				margin-left: 20px;
+			}
+			img {
+				width: 22px;
+				height: 22px;
+				right: 20px;
+				position: absolute;
+				cursor: pointer;
+				transition: all 0.4s;
+				&:hover {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		.content {
+			box-sizing: border-box;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.bottom {
+			position: absolute;
+			float: right;
+			right: 20px;
+			bottom: 20px;
+			.el-button {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+@success: #67c23a;
+.color_success {
+	color: @success;
+}
+@danger: #f56c6c;
+.color_danger {
+	color: @danger;
+}
+
+.dialog {
+	border: 0px;
+	.el-dialog__header,
+	.el-message-box__header {
+		color: #fff;
+		background-color: rgb(33, 149, 246);
+		.el-dialog__title,
+		.el-message-box__title,
+		.el-icon-close,
+		.el-icon {
+			color: #fff;
+		}
+	}
+	.el-dialog__footer {
+		text-align: right;
+		.focusButton {
+			background-color: rgb(33, 149, 246);
+			color: #fff;
+		}
+	}
+	.el-dialog__body {
+		position: relative;
+	}
+	.el-message-box__btns {
+		display: flex;
+		flex-direction: row-reverse;
+		.el-button {
+			margin-left: 10px;
+		}
+	}
+}
+.dialogNoPadding {
+	.el-dialog__body {
+		padding: 0px;
+	}
+}

@@ -1,0 +1,48 @@
+html {
+	font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+body {
+	margin: 0;
+}
+#app {
+	.slot-content {
+		padding: 20px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: calc(100% - 42px - 40px); //减去头和padding
+	}
+	.slot-header {
+		display: flex;
+		align-items: center;
+		height: 42px;
+		width: 100%;
+		font-size: 17px;
+		font-weight: 600;
+		span {
+			padding-left: 21px;
+			margin-right: 8px;
+			font-size: 18px;
+			color: #868686;
+		}
+	}
+	.button {
+		box-sizing: border-box;
+		height: 28px;
+		padding: 3px 12px;
+	}
+}
+
+//滚动条
+*::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #e0e0e0;
+}
+*::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #fff;
+}
